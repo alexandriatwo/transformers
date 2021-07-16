@@ -1,45 +1,10 @@
-<!---
-Copyright 2020 The HuggingFace Team. All rights reserved.
+# README
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+![](https://raw.githubusercontent.com/huggingface/transformers/master/docs/source/imgs/transformers_logo_name.png)
 
-    http://www.apache.org/licenses/LICENSE-2.0
+ [![Build](https://img.shields.io/circleci/build/github/huggingface/transformers/master)](https://circleci.com/gh/huggingface/transformers) [![GitHub](https://img.shields.io/github/license/huggingface/transformers.svg?color=blue)](https://github.com/huggingface/transformers/blob/master/LICENSE) [![Documentation](https://img.shields.io/website/http/huggingface.co/transformers/index.html.svg?down_color=red&down_message=offline&up_message=online)](https://huggingface.co/transformers/index.html) [![GitHub release](https://img.shields.io/github/release/huggingface/transformers.svg)](https://github.com/huggingface/transformers/releases) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/huggingface/transformers/blob/master/CODE_OF_CONDUCT.md)
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-
-<p align="center">
-    <br>
-    <img src="https://raw.githubusercontent.com/huggingface/transformers/master/docs/source/imgs/transformers_logo_name.png" width="400"/>
-    <br>
-<p>
-<p align="center">
-    <a href="https://circleci.com/gh/huggingface/transformers">
-        <img alt="Build" src="https://img.shields.io/circleci/build/github/huggingface/transformers/master">
-    </a>
-    <a href="https://github.com/huggingface/transformers/blob/master/LICENSE">
-        <img alt="GitHub" src="https://img.shields.io/github/license/huggingface/transformers.svg?color=blue">
-    </a>
-    <a href="https://huggingface.co/transformers/index.html">
-        <img alt="Documentation" src="https://img.shields.io/website/http/huggingface.co/transformers/index.html.svg?down_color=red&down_message=offline&up_message=online">
-    </a>
-    <a href="https://github.com/huggingface/transformers/releases">
-        <img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/transformers.svg">
-    </a>
-    <a href="https://github.com/huggingface/transformers/blob/master/CODE_OF_CONDUCT.md">
-        <img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg">
-    </a>
-</p>
-
-<h3 align="center">
-<p>State-of-the-art Natural Language Processing for PyTorch and TensorFlow 2.0
-</h3>
+### State-of-the-art Natural Language Processing for PyTorch and TensorFlow 2.0
 
 🤗 Transformers provides thousands of pretrained models to perform tasks on texts such as classification, information extraction, question answering, summarization, translation, text generation, etc in 100+ languages. Its aim is to make cutting-edge NLP easier to use for everyone.
 
@@ -52,15 +17,16 @@ limitations under the License.
 You can test most of our models directly on their pages from the [model hub](https://huggingface.co/models). We also offer [private model hosting, versioning, & an inference API](https://huggingface.co/pricing) to use those models.
 
 Here are a few examples:
-- [Masked word completion with BERT](https://huggingface.co/bert-base-uncased?text=Paris+is+the+%5BMASK%5D+of+France)
-- [Name Entity Recognition with Electra](https://huggingface.co/dbmdz/electra-large-discriminator-finetuned-conll03-english?text=My+name+is+Sarah+and+I+live+in+London+city)
-- [Text generation with GPT-2](https://huggingface.co/gpt2?text=A+long+time+ago%2C+)
-- [Natural Language Inference with RoBERTa](https://huggingface.co/roberta-large-mnli?text=The+dog+was+lost.+Nobody+lost+any+animal)
-- [Summarization with BART](https://huggingface.co/facebook/bart-large-cnn?text=The+tower+is+324+metres+%281%2C063+ft%29+tall%2C+about+the+same+height+as+an+81-storey+building%2C+and+the+tallest+structure+in+Paris.+Its+base+is+square%2C+measuring+125+metres+%28410+ft%29+on+each+side.+During+its+construction%2C+the+Eiffel+Tower+surpassed+the+Washington+Monument+to+become+the+tallest+man-made+structure+in+the+world%2C+a+title+it+held+for+41+years+until+the+Chrysler+Building+in+New+York+City+was+finished+in+1930.+It+was+the+first+structure+to+reach+a+height+of+300+metres.+Due+to+the+addition+of+a+broadcasting+aerial+at+the+top+of+the+tower+in+1957%2C+it+is+now+taller+than+the+Chrysler+Building+by+5.2+metres+%2817+ft%29.+Excluding+transmitters%2C+the+Eiffel+Tower+is+the+second+tallest+free-standing+structure+in+France+after+the+Millau+Viaduct)
-- [Question answering with DistilBERT](https://huggingface.co/distilbert-base-uncased-distilled-squad?text=Which+name+is+also+used+to+describe+the+Amazon+rainforest+in+English%3F&context=The+Amazon+rainforest+%28Portuguese%3A+Floresta+Amaz%C3%B4nica+or+Amaz%C3%B4nia%3B+Spanish%3A+Selva+Amaz%C3%B3nica%2C+Amazon%C3%ADa+or+usually+Amazonia%3B+French%3A+For%C3%AAt+amazonienne%3B+Dutch%3A+Amazoneregenwoud%29%2C+also+known+in+English+as+Amazonia+or+the+Amazon+Jungle%2C+is+a+moist+broadleaf+forest+that+covers+most+of+the+Amazon+basin+of+South+America.+This+basin+encompasses+7%2C000%2C000+square+kilometres+%282%2C700%2C000+sq+mi%29%2C+of+which+5%2C500%2C000+square+kilometres+%282%2C100%2C000+sq+mi%29+are+covered+by+the+rainforest.+This+region+includes+territory+belonging+to+nine+nations.+The+majority+of+the+forest+is+contained+within+Brazil%2C+with+60%25+of+the+rainforest%2C+followed+by+Peru+with+13%25%2C+Colombia+with+10%25%2C+and+with+minor+amounts+in+Venezuela%2C+Ecuador%2C+Bolivia%2C+Guyana%2C+Suriname+and+French+Guiana.+States+or+departments+in+four+nations+contain+%22Amazonas%22+in+their+names.+The+Amazon+represents+over+half+of+the+planet%27s+remaining+rainforests%2C+and+comprises+the+largest+and+most+biodiverse+tract+of+tropical+rainforest+in+the+world%2C+with+an+estimated+390+billion+individual+trees+divided+into+16%2C000+species)
-- [Translation with T5](https://huggingface.co/t5-base?text=My+name+is+Wolfgang+and+I+live+in+Berlin)
 
-**[Write With Transformer](https://transformer.huggingface.co)**, built by the Hugging Face team, is the official demo of this repo’s text generation capabilities.
+* [Masked word completion with BERT](https://huggingface.co/bert-base-uncased?text=Paris+is+the+%5BMASK%5D+of+France)
+* [Name Entity Recognition with Electra](https://huggingface.co/dbmdz/electra-large-discriminator-finetuned-conll03-english?text=My+name+is+Sarah+and+I+live+in+London+city)
+* [Text generation with GPT-2](https://huggingface.co/gpt2?text=A+long+time+ago%2C+)
+* [Natural Language Inference with RoBERTa](https://huggingface.co/roberta-large-mnli?text=The+dog+was+lost.+Nobody+lost+any+animal)
+* [Summarization with BART](https://huggingface.co/facebook/bart-large-cnn?text=The+tower+is+324+metres+%281%2C063+ft%29+tall%2C+about+the+same+height+as+an+81-storey+building%2C+and+the+tallest+structure+in+Paris.+Its+base+is+square%2C+measuring+125+metres+%28410+ft%29+on+each+side.+During+its+construction%2C+the+Eiffel+Tower+surpassed+the+Washington+Monument+to+become+the+tallest+man-made+structure+in+the+world%2C+a+title+it+held+for+41+years+until+the+Chrysler+Building+in+New+York+City+was+finished+in+1930.+It+was+the+first+structure+to+reach+a+height+of+300+metres.+Due+to+the+addition+of+a+broadcasting+aerial+at+the+top+of+the+tower+in+1957%2C+it+is+now+taller+than+the+Chrysler+Building+by+5.2+metres+%2817+ft%29.+Excluding+transmitters%2C+the+Eiffel+Tower+is+the+second+tallest+free-standing+structure+in+France+after+the+Millau+Viaduct)
+* [Question answering with DistilBERT](https://huggingface.co/distilbert-base-uncased-distilled-squad?text=Which+name+is+also+used+to+describe+the+Amazon+rainforest+in+English%3F&context=The+Amazon+rainforest+%28Portuguese%3A+Floresta+Amaz%C3%B4nica+or+Amaz%C3%B4nia%3B+Spanish%3A+Selva+Amaz%C3%B3nica%2C+Amazon%C3%ADa+or+usually+Amazonia%3B+French%3A+For%C3%AAt+amazonienne%3B+Dutch%3A+Amazoneregenwoud%29%2C+also+known+in+English+as+Amazonia+or+the+Amazon+Jungle%2C+is+a+moist+broadleaf+forest+that+covers+most+of+the+Amazon+basin+of+South+America.+This+basin+encompasses+7%2C000%2C000+square+kilometres+%282%2C700%2C000+sq+mi%29%2C+of+which+5%2C500%2C000+square+kilometres+%282%2C100%2C000+sq+mi%29+are+covered+by+the+rainforest.+This+region+includes+territory+belonging+to+nine+nations.+The+majority+of+the+forest+is+contained+within+Brazil%2C+with+60%25+of+the+rainforest%2C+followed+by+Peru+with+13%25%2C+Colombia+with+10%25%2C+and+with+minor+amounts+in+Venezuela%2C+Ecuador%2C+Bolivia%2C+Guyana%2C+Suriname+and+French+Guiana.+States+or+departments+in+four+nations+contain+%22Amazonas%22+in+their+names.+The+Amazon+represents+over+half+of+the+planet%27s+remaining+rainforests%2C+and+comprises+the+largest+and+most+biodiverse+tract+of+tropical+rainforest+in+the+world%2C+with+an+estimated+390+billion+individual+trees+divided+into+16%2C000+species)
+* [Translation with T5](https://huggingface.co/t5-base?text=My+name+is+Wolfgang+and+I+live+in+Berlin)
+
+[**Write With Transformer**](https://transformer.huggingface.co), built by the Hugging Face team, is the official demo of this repo’s text generation capabilities.
 
 ## Quick tour
 
@@ -79,7 +45,7 @@ The second line of code downloads and caches the pretrained model used by the pi
 
 This is another example of pipeline used for that can extract question answers from some context:
 
-``` python
+```python
 >>> from transformers import pipeline
 
 # Allocate a pipeline for question-answering
@@ -89,12 +55,12 @@ This is another example of pipeline used for that can extract question answers f
 ...     'context': 'Pipeline have been included in the huggingface/transformers repository'
 ... })
 {'score': 0.5135612454720828, 'start': 35, 'end': 59, 'answer': 'huggingface/transformers'}
-
 ```
 
 On top of the answer, the pretrained model used here returned its confidence score, along with the start position and its end position in the tokenized sentence. You can learn more about the tasks supported by the `pipeline` API in [this tutorial](https://huggingface.co/transformers/task_summary.html).
 
-To download and use any of the pretrained models on your given task, you just need to use those three lines of codes (PyTorch version):
+To download and use any of the pretrained models on your given task, you just need to use those three lines of codes \(PyTorch version\):
+
 ```python
 >>> from transformers import AutoTokenizer, AutoModel
 
@@ -104,7 +70,9 @@ To download and use any of the pretrained models on your given task, you just ne
 >>> inputs = tokenizer("Hello world!", return_tensors="pt")
 >>> outputs = model(**inputs)
 ```
+
 or for TensorFlow:
+
 ```python
 >>> from transformers import AutoTokenizer, TFAutoModel
 
@@ -115,51 +83,47 @@ or for TensorFlow:
 >>> outputs = model(**inputs)
 ```
 
-The tokenizer is responsible for all the preprocessing the pretrained model expects, and can be called directly on one (or list) of texts (as we can see on the fourth line of both code examples). It will output a dictionary you can directly pass to your model (which is done on the fifth line).
+The tokenizer is responsible for all the preprocessing the pretrained model expects, and can be called directly on one \(or list\) of texts \(as we can see on the fourth line of both code examples\). It will output a dictionary you can directly pass to your model \(which is done on the fifth line\).
 
-The model itself is a regular [Pytorch `nn.Module`](https://pytorch.org/docs/stable/nn.html#torch.nn.Module) or a [TensorFlow `tf.keras.Model`](https://www.tensorflow.org/api_docs/python/tf/keras/Model) (depending on your backend) which you can use normally. For instance, [this tutorial](https://huggingface.co/transformers/training.html) explains how to integrate such a model in classic PyTorch or TensorFlow training loop, or how to use our `Trainer` API to quickly fine-tune the on a new dataset.
+The model itself is a regular [Pytorch `nn.Module`](https://pytorch.org/docs/stable/nn.html#torch.nn.Module) or a [TensorFlow `tf.keras.Model`](https://www.tensorflow.org/api_docs/python/tf/keras/Model) \(depending on your backend\) which you can use normally. For instance, [this tutorial](https://huggingface.co/transformers/training.html) explains how to integrate such a model in classic PyTorch or TensorFlow training loop, or how to use our `Trainer` API to quickly fine-tune the on a new dataset.
 
 ## Why should I use transformers?
 
 1. Easy-to-use state-of-the-art models:
-    - High performance on NLU and NLG tasks.
-    - Low barrier to entry for educators and practitioners.
-    - Few user-facing abstractions with just three classes to learn.
-    - A unified API for using all our pretrained models.
-
-1. Lower compute costs, smaller carbon footprint:
-    - Researchers can share trained models instead of always retraining.
-    - Practitioners can reduce compute time and production costs.
-    - Dozens of architectures with over 2,000 pretrained models, some in more than 100 languages.
-
-1. Choose the right framework for every part of a model's lifetime:
-    - Train state-of-the-art models in 3 lines of code.
-    - Move a single model between TF2.0/PyTorch frameworks at will.
-    - Seamlessly pick the right framework for training, evaluation, production.
-
-1. Easily customize a model or an example to your needs:
-    - Examples for each architecture to reproduce the results by the official authors of said architecture.
-    - Expose the models internal as consistently as possible.
-    - Model files can be used independently of the library for quick experiments.
+   * High performance on NLU and NLG tasks.
+   * Low barrier to entry for educators and practitioners.
+   * Few user-facing abstractions with just three classes to learn.
+   * A unified API for using all our pretrained models.
+2. Lower compute costs, smaller carbon footprint:
+   * Researchers can share trained models instead of always retraining.
+   * Practitioners can reduce compute time and production costs.
+   * Dozens of architectures with over 2,000 pretrained models, some in more than 100 languages.
+3. Choose the right framework for every part of a model's lifetime:
+   * Train state-of-the-art models in 3 lines of code.
+   * Move a single model between TF2.0/PyTorch frameworks at will.
+   * Seamlessly pick the right framework for training, evaluation, production.
+4. Easily customize a model or an example to your needs:
+   * Examples for each architecture to reproduce the results by the official authors of said architecture.
+   * Expose the models internal as consistently as possible.
+   * Model files can be used independently of the library for quick experiments.
 
 ## Why shouldn't I use transformers?
 
-- This library is not a modular toolbox of building blocks for neural nets. The code in the model files is not refactored with additional abstractions on purpose, so that researchers can quickly iterate on each of the models without diving in additional abstractions/files.
-- The training API is not intended to work on any model but is optimized to work with the models provided by the library. For generic machine learning loops, you should use another library.
-- While we strive to present as many use cases as possible, the scripts in our [examples folder](https://github.com/huggingface/transformers/tree/master/examples) are just that: examples. It is expected that they won't work out-of-the box on your specific problem and that you will be required to change a few lines of code to adapt them to your needs.
+* This library is not a modular toolbox of building blocks for neural nets. The code in the model files is not refactored with additional abstractions on purpose, so that researchers can quickly iterate on each of the models without diving in additional abstractions/files.
+* The training API is not intended to work on any model but is optimized to work with the models provided by the library. For generic machine learning loops, you should use another library.
+* While we strive to present as many use cases as possible, the scripts in our [examples folder](https://github.com/huggingface/transformers/tree/master/examples) are just that: examples. It is expected that they won't work out-of-the box on your specific problem and that you will be required to change a few lines of code to adapt them to your needs.
 
 ## Installation
 
 ### With pip
 
-This repository is tested on Python 3.6+, PyTorch 1.0.0+ (PyTorch 1.3.1+ for [examples](https://github.com/huggingface/transformers/tree/master/examples)) and TensorFlow 2.0.
+This repository is tested on Python 3.6+, PyTorch 1.0.0+ \(PyTorch 1.3.1+ for [examples](https://github.com/huggingface/transformers/tree/master/examples)\) and TensorFlow 2.0.
 
 You should install 🤗 Transformers in a [virtual environment](https://docs.python.org/3/library/venv.html). If you're unfamiliar with Python virtual environments, check out the [user guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 
 First, create a virtual environment with the version of Python you're going to use and activate it.
 
-Then, you will need to install at least one of TensorFlow 2.0, PyTorch or Flax.
-Please refer to [TensorFlow installation page](https://www.tensorflow.org/install/pip#tensorflow-2.0-rc-is-available), [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) regarding the specific install command for your platform and/or [Flax installation page](https://github.com/google/flax#quick-install).
+Then, you will need to install at least one of TensorFlow 2.0, PyTorch or Flax. Please refer to [TensorFlow installation page](https://www.tensorflow.org/install/pip#tensorflow-2.0-rc-is-available), [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) regarding the specific install command for your platform and/or [Flax installation page](https://github.com/google/flax#quick-install).
 
 When TensorFlow 2.0 and/or PyTorch has been installed, 🤗 Transformers can be installed using pip as follows:
 
@@ -175,10 +139,9 @@ Since Transformers version v4.0.0, we now have a conda channel: `huggingface`.
 
 🤗 Transformers can be installed using conda as follows:
 
-```shell script
-conda install -c huggingface transformers
-```
+\`\`\`shell script conda install -c huggingface transformers
 
+```text
 Follow the installation pages of TensorFlow, PyTorch or Flax to see how to install them with conda.
 
 ## Models architectures
@@ -276,3 +239,4 @@ We now have a [paper](https://www.aclweb.org/anthology/2020.emnlp-demos.6/) you 
     pages = "38--45"
 }
 ```
+
