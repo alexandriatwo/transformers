@@ -53,7 +53,7 @@ To successfully add a model, it is important to understand the interaction betwe
 
 Let's take a look:
 
-![image](../../../../.gitbook/assets/transformers_overview.png)
+![image](../../../../.gitbook/assets/transformers_overview%20%281%29.png)
 
 As you can see, we do make use of inheritance in 🤗 Transformers, but we keep the level of abstraction to an absolute minimum. There are never more than two levels of abstraction for any model in the library. `BrandNewBertModel` inherits from `BrandNewBertPreTrainedModel` which in turn inherits from `PreTrainedModel` and that's it. As a general rule, we want to make sure that a new model only depends on `PreTrainedModel`. The important functionalities that are automatically provided to every new model are `PreTrainedModel.from_pretrained` and `PreTrainedModel.save_pretrained`, which are used for serialization and deserialization. All of the other important functionalities, such as `BrandNewBertModel.forward` should be completely defined in the new `modeling_brand_new_bert.py` module. Next, we want to make sure that a model with a specific head layer, such as `BrandNewBertForMaskedLM` does not inherit from `BrandNewBertModel`, but rather uses `BrandNewBertModel` as a component that can be called in its forward pass to keep the level of abstraction low. Every new model requires a configuration class, called `BrandNewBertConfig`. This configuration is always stored as an attribute in `PreTrainedModel`, and thus can be accessed via the `config` attribute for all classes inheriting from `BrandNewBertPreTrainedModel`
 
